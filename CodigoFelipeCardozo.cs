@@ -45,19 +45,18 @@ class Program {
 
   static void UpperCase() {
     string min = "tudo está minúsculo. ah, pera. já alterou? ufa";
-    string[] pasArray = min.Split(' ');
-    if(){}
-    
-    string linhaRev = string.Empty
-
+    string minUp = string.Empty
+    char[] pasArray = min;
+    if(char.IsLower(pasArray[0])){
+      pasArray[0] = char.ToUpper(char.pasArray[0]);
+    }
+    minUp = new string(pasArray);
   }
   static void AnagPalin() {
     string ap = "racecar";
-    bool x = false;
     char[] chasArray = ap.ToCharArray();
     Array.Reverse(chasArray);
     string apRev = new string(chasArray);
-
-    Console.WriteLine("Reversed string: " + apRev);
+    Console.WriteLine(string.Equals(ap, apRev));
   }
 }
