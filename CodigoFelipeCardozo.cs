@@ -14,5 +14,24 @@ class Program {
     
     5. Similar ao 3, colocar os caracteres da string em um array, e verificar se uma string nova com os itens do array é igual à string original e se for, então true.
     */
+    Revert();
+  }
+
+  static void Revert() {
+    string linha = "Oi sou eu";
+    string linhaRev = "";
+    string[] palavrasArray = linha.Split(' ');
+    Array.Reverse(palavrasArray);
+    foreach (string palavra in palavrasArray) {
+      /*if (palavrasArray[0]) {
+        linhaRev += palavra
+      }
+
+      else {
+      linhaRev += " " + palavra;
+      }
+      */
+    }
+    Console.WriteLine(linhaRev);
   }
 }
