@@ -4,7 +4,8 @@ class Program {
     Console.WriteLine("Começo");
     /* 
     Pensamentos/raciocinio antes e durante implementação do código:
-    1. Para essa etapa, precisa pegar as strings na posição reversa, e colocá-las sem que a palavra fosse alterada(Ex: "amazing" -> "gnizama")
+    1. Para essa etapa, precisa pegar as strings na posição reversa, e colocá-las sem que a palavra fosse alterada(Ex: "amazing" -> "gnizama"), solucionado por meio de colocar as palavras presentes em um array,
+    revertendo a ordem e adicionando a uma string nova 
     
     2. Daria pra checar num loop for se i = j em que j percorre toda a string, remove o caractere quando ocorre essa igualdade
     
@@ -15,6 +16,7 @@ class Program {
     5. Similar ao 3, colocar os caracteres da string em um array, e verificar se uma string nova com os itens do array é igual à string original e se for, então true.
     */
     Revert();
+    RemoveDupe();
   }
 
   static void Revert() {
@@ -43,7 +45,19 @@ class Program {
 
   static void UpperCase() {
     string min = "tudo está minúsculo. ah, pera. já alterou? ufa";
-    string[] pasArray = linha.Split(' ');
-    string linhaRev = s
+    string[] pasArray = min.Split(' ');
+    if(){}
+    
+    string linhaRev = string.Empty
+
+  }
+  static void AnagPalin() {
+    string ap = "racecar";
+    bool x = false;
+    char[] chasArray = ap.ToCharArray();
+    Array.Reverse(chasArray);
+    string apRev = new string(chasArray);
+
+    Console.WriteLine("Reversed string: " + apRev);
   }
 }
