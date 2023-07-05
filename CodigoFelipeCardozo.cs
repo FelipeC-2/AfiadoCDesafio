@@ -18,20 +18,10 @@ class Program {
   }
 
   static void Revert() {
-    string linha = "Oi sou eu";
-    string linhaRev = "";
+    string linha = Console.ReadLine();
     string[] palavrasArray = linha.Split(' ');
     Array.Reverse(palavrasArray);
-    foreach (string palavra in palavrasArray) {
-      /*if (palavrasArray[0]) {
-        linhaRev += palavra
-      }
-
-      else {
-      linhaRev += " " + palavra;
-      }
-      */
-    }
+    string linhaRev = string.Join(" ", palavrasArray);
     Console.WriteLine(linhaRev);
   }
 }
