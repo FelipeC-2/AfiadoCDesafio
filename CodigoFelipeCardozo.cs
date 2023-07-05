@@ -24,4 +24,26 @@ class Program {
     string linhaRev = string.Join(" ", palavrasArray);
     Console.WriteLine(linhaRev);
   }
+
+  static void RemoveDupe() {
+    string duped = "Hello world, it's me";
+    string novaString = "";
+    foreach (char letter in duped){
+      if(novaString.IndexOf(letter) == -1 || !Char.IsLetter(letter)){
+        novaString += letter;
+      }
+    }
+    Console.WriteLine(novaString);
+  }
+
+  static void StrPalin() {
+    string palinha = "babad";
+
+  }
+
+  static void UpperCase() {
+    string min = "tudo está minúsculo. ah, pera. já alterou? ufa";
+    string[] pasArray = linha.Split(' ');
+    string linhaRev = s
+  }
 }
