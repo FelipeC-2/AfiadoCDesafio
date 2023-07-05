@@ -39,18 +39,32 @@ class Program {
   }
 
   static void StrPalin() {
-    string palinha = "babad";
-
+    string palhao = "babad";
+    string palinha = string.Empty;
+    
   }
 
   static void UpperCase() {
     string min = "tudo está minúsculo. ah, pera. já alterou? ufa";
-    string minUp = string.Empty
-    char[] pasArray = min;
+    string minUp = string.Empty;
+    char[] pasArray = min.ToCharArray();
     if(char.IsLower(pasArray[0])){
-      pasArray[0] = char.ToUpper(char.pasArray[0]);
+      pasArray[0] = char.ToUpper(pasArray[0]);
+    }
+    for(int i = 1; i < pasArray.Length; i++){
+      int j = i - 1;
+      int k = i - 2;
+      try{
+        if(char.IsLower(pasArray[i]) && pasArray[j] == ' ' && pasArray[k] == '?' || pasArray[k] == '.' || pasArray[k] == '!'){
+        pasArray[i] = char.ToUpper(pasArray[i]);
+      }
+      }
+      catch (Exception e){
+
+      }
     }
     minUp = new string(pasArray);
+    Console.WriteLine(minUp);
   }
   static void AnagPalin() {
     string ap = "racecar";
