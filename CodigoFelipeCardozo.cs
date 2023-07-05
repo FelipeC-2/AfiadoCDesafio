@@ -41,7 +41,7 @@ class Program {
   static void StrPalin() {
     string palhao = "babad";
     string palinha = string.Empty;
-    
+
   }
 
   static void UpperCase() {
@@ -59,7 +59,7 @@ class Program {
         pasArray[i] = char.ToUpper(pasArray[i]);
       }
       }
-      catch (Exception e){
+      catch (Exception){
 
       }
     }
