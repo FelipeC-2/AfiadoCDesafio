@@ -14,16 +14,37 @@ class Program {
     
     5. Similar ao 3, colocar os caracteres da string em um array, e verificar se uma string nova com os itens do array é igual à string original e se for, então true.
     */
-    Console.WriteLine("===== 1. REVERTER AS ORDENS DAS PALAVRAS, MANTENDO A ORDEM. =====");
-    Revert();
-    Console.WriteLine("===== 2. REMOVER CARACTERES DUPLICADOS NA STRING. =====");
-    RemoveDupe();
-    Console.WriteLine("===== 3. ECONTRAR A SUBSTRING MAIS LONGA QUE É UM PALÍNDROMO. =====");
-    StrPalin();
-    Console.WriteLine("===== 4. TRANSFORMAR TODAS AS LETRAS DA FRASE EM LETRAS MAIÚSCULAS. =====");
-    UpperCase();
-    Console.WriteLine("===== 5. VERIFICAR SE A STRING É UM ANAGRAMA DE UM PALÍNDROMO. =====");
-    AnagPalin();
+    Console.WriteLine("Digite o método que deseja executar.");
+    Console.WriteLine("1. Reverte / 2. Remover duplicados / 3. Substring palíndromo / 4. Corrigir frases / 5. Verificar se é palíndromo");
+    string option = Console.ReadLine();
+    if(string.IsNullOrEmpty(option) ){
+      Console.WriteLine("Por favor reinicie o programa e insira um valor");
+    }  
+    switch (option) {
+      case "1":
+        Console.WriteLine("===== 1. REVERTER AS ORDENS DAS PALAVRAS, MANTENDO A ORDEM. =====");
+        Revert();
+        break;
+      case "2":
+        Console.WriteLine("===== 2. REMOVER CARACTERES DUPLICADOS NA STRING. =====");
+        RemoveDupe();
+        break;
+      case "3":
+        Console.WriteLine("===== 3. ECONTRAR A SUBSTRING MAIS LONGA QUE É UM PALÍNDROMO. =====");
+        StrPalin();
+        break;
+      case "4":
+        Console.WriteLine("===== 4. TRANSFORMAR TODAS AS LETRAS DA FRASE EM LETRAS MAIÚSCULAS. =====");
+        UpperCase();
+        break;
+      case "5":
+        Console.WriteLine("===== 5. VERIFICAR SE A STRING É UM ANAGRAMA DE UM PALÍNDROMO. =====");
+        AnagPalin();
+        break;
+      default:
+        Console.WriteLine("Essa não é uma opção.");
+        break;
+    }
   }
 
   static void Revert() {
@@ -69,7 +90,7 @@ class Program {
     Console.WriteLine("String com palíndromo mais longo: " + palinha);
   }
   static void UpperCase() {
-    string min = "hello. how are you? i'm fine, thank you.";
+    string min = "hello world! how are you? i'm fine, thank you.";
     Console.WriteLine("String original:" + min);
     char[] pasArray = min.ToCharArray();
     if(char.IsLower(pasArray[0])){
