@@ -1,0 +1,15 @@
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\bin\Debug\net7.0\AfiadoCDesafio.exe
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\bin\Debug\net7.0\AfiadoCDesafio.deps.json
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\bin\Debug\net7.0\AfiadoCDesafio.runtimeconfig.json
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\bin\Debug\net7.0\AfiadoCDesafio.dll
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\bin\Debug\net7.0\AfiadoCDesafio.pdb
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\AfiadoCDesafio.csproj.AssemblyReference.cache
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\AfiadoCDesafio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\AfiadoCDesafio.AssemblyInfoInputs.cache
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\AfiadoCDesafio.AssemblyInfo.cs
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\AfiadoCDesafio.csproj.CoreCompileInputs.cache
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\AfiadoCDesafio.dll
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\refint\AfiadoCDesafio.dll
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\AfiadoCDesafio.pdb
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\AfiadoCDesafio.genruntimeconfig.cache
+C:\Users\Morre\Documents\GitHub\AfiadoCDesafio\obj\Debug\net7.0\ref\AfiadoCDesafio.dll

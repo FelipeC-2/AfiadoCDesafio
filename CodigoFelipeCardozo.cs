@@ -39,7 +39,7 @@ class Program {
     string duped = "Hello World!";
     string novaString = "";
     foreach (char letter in duped){
-      if(novaString.IndexOf(letter) == -1 || !Char.IsLetter(letter)){
+      if(!novaString.Contains(letter) || !Char.IsLetter(letter)){
         novaString += letter;
       }
     }
@@ -68,7 +68,6 @@ class Program {
   }
   static void UpperCase() {
     string min = "hello. how are you? i'm fine, thank you.";
-    string minUp = string.Empty;
     char[] pasArray = min.ToCharArray();
     if(char.IsLower(pasArray[0])){
       pasArray[0] = char.ToUpper(pasArray[0]);
@@ -85,15 +84,14 @@ class Program {
 
       }
     }
-    minUp = new string(pasArray);
-    Console.WriteLine(minUp);
+    string minUp = new(pasArray);
+        Console.WriteLine(minUp);
   }
   static void AnagPalin() {
     string ap = "racecar";
     char[] chasArray = ap.ToCharArray();
     Array.Reverse(chasArray);
-    string apRev = new string(chasArray);
+    string apRev = new(chasArray);
     Console.WriteLine(ap.Equals(apRev, StringComparison.OrdinalIgnoreCase));
-
   }
 }
