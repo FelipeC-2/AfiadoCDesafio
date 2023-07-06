@@ -15,12 +15,20 @@ class Program {
     
     5. Similar ao 3, colocar os caracteres da string em um array, e verificar se uma string nova com os itens do array é igual à string original e se for, então true.
     */
+    Console.WriteLine("===== 1. REVERTER AS ORDENS DAS PALAVRAS, MANTENDO A ORDEM. =====");
     Revert();
+    Console.WriteLine("===== 2. REMOVER CARACTERES DUPLICADOS NA STRING. =====");
     RemoveDupe();
+    Console.WriteLine("===== 3. ECONTRAR A SUBSTRING MAIS LONGA QUE É UM PALÍNDROMO. =====");
+    StrPalin();
+    Console.WriteLine("===== 4. TRANSFORMAR TODAS AS LETRAS DA FRASE EM LETRAS MAIÚSCULAS. =====");
+    UpperCase();
+    Console.WriteLine("===== 5. VERIFICAR SE A STRING É UM ANAGRAMA DE UM PALÍNDROMO. =====");
+    AnagPalin();
   }
 
   static void Revert() {
-    string linha = Console.ReadLine();
+    string linha = "Hello World! OpenAI is amazing";
     string[] palavrasArray = linha.Split(' ');
     Array.Reverse(palavrasArray);
     string linhaRev = string.Join(" ", palavrasArray);
@@ -28,7 +36,7 @@ class Program {
   }
 
   static void RemoveDupe() {
-    string duped = "Hello world, it's me";
+    string duped = "Hello World!";
     string novaString = "";
     foreach (char letter in duped){
       if(novaString.IndexOf(letter) == -1 || !Char.IsLetter(letter)){
@@ -38,14 +46,28 @@ class Program {
     Console.WriteLine(novaString);
   }
 
-  static void StrPalin() {
+  static void StrPalin(){
     string palhao = "babad";
-    string palinha = string.Empty;
-
+    string palinha = "";
+    for (int i = 0; i < palhao.Length; i++){
+      for (int j = palhao.Length - 1; j >= i; j--){
+        string pequena = palhao.Substring(i, j - i + 1);
+        bool ispalin = true;
+        for (int k = 0; k < pequena.Length / 2; k++){
+          if (pequena[k] != pequena[pequena.Length - 1 - k]){
+            ispalin = false;
+            break;
+            }
+          }
+          if (ispalin && pequena.Length > palinha.Length){
+            palinha = pequena;
+          }
+      }
+    }
+    Console.WriteLine(palinha);
   }
-
   static void UpperCase() {
-    string min = "tudo está minúsculo. ah, pera. já alterou? ufa";
+    string min = "hello. how are you? i'm fine, thank you.";
     string minUp = string.Empty;
     char[] pasArray = min.ToCharArray();
     if(char.IsLower(pasArray[0])){
@@ -71,6 +93,7 @@ class Program {
     char[] chasArray = ap.ToCharArray();
     Array.Reverse(chasArray);
     string apRev = new string(chasArray);
-    Console.WriteLine(string.Equals(ap, apRev));
+    Console.WriteLine(ap.Equals(apRev, StringComparison.OrdinalIgnoreCase));
+
   }
 }
