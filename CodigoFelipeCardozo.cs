@@ -1,13 +1,12 @@
 using System;
 class Program {
   static void Main() {
-    Console.WriteLine("Começo");
     /* 
     Pensamentos/raciocinio antes e durante implementação do código:
     1. Para essa etapa, precisa pegar as strings na posição reversa, e colocá-las sem que a palavra fosse alterada(Ex: "amazing" -> "gnizama"), solucionado por meio de colocar as palavras presentes em um array,
     revertendo a ordem e adicionando a uma string nova 
     
-    2. Daria pra checar num loop for se i = j em que j percorre toda a string, remove o caractere quando ocorre essa igualdade
+    2. Daria pra checar num loop for se i = j em que j percorre toda a string, remove o caractere quando ocorre essa igualdade, descartado. Solucionado:
     
     3. Colocar os caracteres da string em um array, escrever uma string nova com essas linhas
     
@@ -28,26 +27,29 @@ class Program {
   }
 
   static void Revert() {
-    string linha = "Hello World! OpenAI is amazing";
+    string linha = "Hello World! OpenAI is amazing.";
+    Console.WriteLine("String original: " + linha);
     string[] palavrasArray = linha.Split(' ');
     Array.Reverse(palavrasArray);
     string linhaRev = string.Join(" ", palavrasArray);
-    Console.WriteLine(linhaRev);
+    Console.WriteLine("String com ordem reversa: " + linhaRev);
   }
 
   static void RemoveDupe() {
     string duped = "Hello World!";
+    Console.WriteLine("String original: " + duped);
     string novaString = "";
     foreach (char letter in duped){
       if(!novaString.Contains(letter) || !Char.IsLetter(letter)){
         novaString += letter;
       }
     }
-    Console.WriteLine(novaString);
+    Console.WriteLine("String com as letras duplicadas removidas: " + novaString);
   }
 
   static void StrPalin(){
     string palhao = "babad";
+    Console.WriteLine("String original: " + palhao);
     string palinha = "";
     for (int i = 0; i < palhao.Length; i++){
       for (int j = palhao.Length - 1; j >= i; j--){
@@ -64,10 +66,11 @@ class Program {
           }
       }
     }
-    Console.WriteLine(palinha);
+    Console.WriteLine("String com palíndromo mais longo: " + palinha);
   }
   static void UpperCase() {
     string min = "hello. how are you? i'm fine, thank you.";
+    Console.WriteLine("String original:" + min);
     char[] pasArray = min.ToCharArray();
     if(char.IsLower(pasArray[0])){
       pasArray[0] = char.ToUpper(pasArray[0]);
@@ -85,13 +88,14 @@ class Program {
       }
     }
     string minUp = new(pasArray);
-        Console.WriteLine(minUp);
+    Console.WriteLine("String corrigida: " + minUp);
   }
   static void AnagPalin() {
     string ap = "racecar";
+    Console.WriteLine("String original: " + ap);
     char[] chasArray = ap.ToCharArray();
     Array.Reverse(chasArray);
     string apRev = new(chasArray);
-    Console.WriteLine(ap.Equals(apRev, StringComparison.OrdinalIgnoreCase));
+    Console.WriteLine("É um palíndromo? " + ap.Equals(apRev, StringComparison.OrdinalIgnoreCase));
   }
 }
